@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiple Files Downloader</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .input-group {
+      margin-bottom: 20px;
+    }
+    .input-group input {
+      width: 80%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-right: 10px;
+    }
+    .input-group button {
+      padding: 10px 15px;
+      border: none;
+      background-color: #0f0f0f;
+      color: #fff;
+      cursor: pointer;
+    }
+    .download-item {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #f7f7f7;
+    }
+    .progress-container {
+      width: 100%;
+      background-color: #e0e0e0;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 10px 0;
+    }
+    .progress-bar {
+      height: 20px;
+      background-color: #000000;
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+    button {
+      padding: 8px 12px;
+      margin-right: 5px;
+      border: none;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    button.start {
+      background-color: #000000;
+      color: white;
+    }
+    button.pause {
+      background-color: #f0ad4e;
+      color: white;
+    }
+    button.resume {
+      background-color: #4a8cca;
+      color: white;
+    }
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Multiple files downloading manager</h1>
+    <div class="input-group">
+      <input type="text" id="videoUrl" placeholder="Enter video URL">
+      <button id="addDownload">Add</button>
+    </div>
+    <div id="download-list"></div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
