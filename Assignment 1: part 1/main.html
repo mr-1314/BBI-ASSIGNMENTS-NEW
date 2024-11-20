@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multithreading in JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            margin-right: 10px;
+            padding: 10px 15px;
+            margin-left: 200px;
+        }
+        #progress {
+            margin-top: 10px;
+            font-weight: bold;
+            margin-left: 490px;
+        }
+        #result{
+            margin-left: 490px;
+        }
+        h1{
+            text-align: center;
+        }
+        label{
+            margin-left: 490px;
+        }        
+
+    </style>
+</head>
+<body>
+    <h1>Performance calculator</h1>
+    <label for="coreSelect">Select Number of Cores:</label>
+    <select id="coreSelect">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="4" selected>4</option>
+    <option value="8">8</option>
+    </select>
+    <br><br>
+    <label for="limitInput">Enter limit:</label>
+    <input type="number" id="limitInput" placeholder="Enter limit" min="1" >
+    <br><br>
+    <button id="singleThreadBtn">Run Single-Threaded</button>
+    <button id="multiThreadBtn">Run Multi-Threaded</button>
+    <button id="cancelBtn" disabled>Cancel Operation</button>
+    <div id="progress"></div>
+    <div id="result"></div>
+    <div id="noOfWorkers"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>
